@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Werror -g -std=gnu11
 
-SHELL_OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
+SHELL_OBJS=shell.o tokenizer/tokens.o vector/vect.o
 
 ifeq ($(shell uname), Darwin)
 	LEAKTEST ?= leaks --atExit --
