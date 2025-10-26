@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Werror -g -std=gnu11
 
-SHELL_OBJS=shell.o tokenizer/tokens.o vector/vect.o
+SHELL_OBJS=shell.o tokenizer/tokens.o vector/vect.o builtins.o process.o
 
 ifeq ($(shell uname), Darwin)
 	LEAKTEST ?= leaks --atExit --
@@ -22,7 +22,7 @@ shell-tests : %-tests: %
 test: shell-tests 
 
 clean: 
-	rm -rf *.o
+	rm -rf *.o tokenizer/*.o vector/*.o
 	rm -f shell
 
 shell: $(SHELL_OBJS)
