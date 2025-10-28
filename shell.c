@@ -15,6 +15,7 @@ void execute_line(const char *line, char *prev_input) {
   int result = handle_builtins(tokens, prev_input);
   switch (result) {
   case 2:
+    printf("Bye bye.\n");
     vect_delete(tokens);
     exit(0);
   case 0:

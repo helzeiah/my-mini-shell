@@ -8,7 +8,7 @@
 
 void execute_line(const char *line, char *prev_input);
 
-int handle_builtins(vect_t *tokens, const char *prev_input);
+int handle_builtins(vect_t *tokens, char *prev_input);
 
 void process_command(vect_t *tokens);
 
