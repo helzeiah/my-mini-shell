@@ -1,6 +1,6 @@
 # my-mini-shell
 
-a small unix like shell written in C. Supports command execution, I/O redirection, sequencing and piping. 
+a small unix like shell written in C. supports command execution, I/O redirection, sequencing and piping. 
 
 ---
 
